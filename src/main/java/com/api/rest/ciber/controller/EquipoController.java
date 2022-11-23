@@ -24,7 +24,7 @@ import com.api.rest.ciber.exception.ResourceNotFoundException;
 public class EquipoController {
 
 	@Autowired
-	private EquipoDAO equipoDAO;
+	private EquipoDAO equipoDAO; //Auto injectable DAO class
 
 	@GetMapping("/equipos")
 	public List<Equipo> getAllEquipos() {

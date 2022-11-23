@@ -13,12 +13,12 @@ public class CiberLunaBackEnd2Application {
 		SpringApplication.run(CiberLunaBackEnd2Application.class, args);
 	}
 	
-	@Bean
+	@Bean //A bean to allow connection from unknown points
 	WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 		@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:8080").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}

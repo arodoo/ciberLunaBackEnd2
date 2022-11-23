@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "CLIENTES")
 public class Cliente {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)  //auto-generated id
 	private Long id_cliente;
 
 	private String nombre;
@@ -22,7 +22,7 @@ public class Cliente {
 	private String telefono;
 	
 	@ManyToOne
-	@JoinColumn(name = "empleado_id")
+	@JoinColumn(name = "empleado_id")					 //Many-to-one relationship in database
 	private Empleado empleado;
 
 	public Cliente() {
