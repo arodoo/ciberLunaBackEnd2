@@ -59,6 +59,8 @@ public class EquipoController {
 		equipo.setMarca(equipoDetails.getMarca());
 		equipo.setModelo(equipoDetails.getModelo());
 		equipo.setFecha_recibido(equipoDetails.getFecha_recibido());
+		equipo.setDetalle_problema(equipoDetails.getDetalle_problema());
+		equipo.setCosto_reparacion(equipoDetails.getCosto_reparacion());
 		equipo.setEntregado(equipoDetails.getEntregado());
 		equipo.setEstado_reparacion(equipoDetails.getEstado_reparacion());
 		

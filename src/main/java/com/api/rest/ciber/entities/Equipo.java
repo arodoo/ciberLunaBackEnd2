@@ -23,6 +23,10 @@ public class Equipo {
 	private String modelo;
 
 	java.sql.Date fecha_recibido = new java.sql.Date(getDate());
+	
+	private String detalle_problema;
+	
+	private Float costo_reparacion;
 
 	private Boolean entregado = false;
 
@@ -45,12 +49,14 @@ public class Equipo {
 
 	}
 
-	public Equipo(String marca, String modelo, Date fecha_recibido, Boolean entregado, Boolean estado_reparacion,
-			Cliente cliente, Empleado empleado) {
+	public Equipo(String marca, String modelo, Date fecha_recibido, String detalle_problema, Float costo_reparacion,
+			Boolean entregado, Boolean estado_reparacion, Cliente cliente, Empleado empleado) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
 		this.fecha_recibido = fecha_recibido;
+		this.detalle_problema = detalle_problema;
+		this.costo_reparacion = costo_reparacion;
 		this.entregado = entregado;
 		this.estado_reparacion = estado_reparacion;
 		this.cliente = cliente;
@@ -87,6 +93,22 @@ public class Equipo {
 
 	public void setFecha_recibido(java.sql.Date fecha_recibido) {
 		this.fecha_recibido = fecha_recibido;
+	}
+
+	public String getDetalle_problema() {
+		return detalle_problema;
+	}
+
+	public void setDetalle_problema(String detalle_problema) {
+		this.detalle_problema = detalle_problema;
+	}
+
+	public Float getCosto_reparacion() {
+		return costo_reparacion;
+	}
+
+	public void setCosto_reparacion(Float costo_reparacion) {
+		this.costo_reparacion = costo_reparacion;
 	}
 
 	public Boolean getEntregado() {
